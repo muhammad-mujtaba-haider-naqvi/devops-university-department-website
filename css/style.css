@@ -42,7 +42,10 @@ body {
 
 .hero {
   min-height: 75vh;
-  background: linear-gradient(rgba(11, 31, 58, 0.85), rgba(11, 31, 58, 0.85));
+  background: linear-gradient(
+    rgb(11 31 58 / 85%),
+    rgb(11 31 58 / 85%)
+  );
   color: white;
   display: flex;
   flex-direction: column;
@@ -90,7 +93,7 @@ body {
   background: white;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 8%);
   flex: 1;
 }
 
