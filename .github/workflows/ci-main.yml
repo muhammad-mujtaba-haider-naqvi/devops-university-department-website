@@ -13,14 +13,19 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Verify HTML Files
-        run: |
-          find . -name "*.html"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-      - name: Verify CSS Files
-        run: |
-          find . -name "*.css"
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run HTML Lint
+        run: npm run lint:html
+
+      - name: Run CSS Lint
+        run: npm run lint:css
 
       - name: Build Docker Image
-        run: |
-          docker build -t production-university-website .
+        run: docker build -t university-department-website .
